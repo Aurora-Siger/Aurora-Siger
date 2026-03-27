@@ -97,13 +97,13 @@ TELEMETRIA:
 - Status geral: {status_texto}
 
 Responda em português com:
-1. Classificação dos dados (normal / atenção / crítico)
+1. Classificação de cada dado (normal / atenção / crítico)
 2. Possíveis anomalias identificadas
 3. Sugestões de risco
 4. Formato de resposta: Texto simples, direto e claro. Sem formatação adicional.
 """
 
-print("\n[ Análise IA — Gemini ]")
+print("\n[ Análise IA - Gemini ]")
 print("\n[ Aguardando resultado... ]\n")
 resposta = modelo.generate_content(prompt)
 print(resposta.text)
