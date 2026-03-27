@@ -1,4 +1,11 @@
 import time
+import os
+from dotenv import load_dotenv
+import google.generativeai as genai
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+modelo = genai.GenerativeModel("gemini-2.5-flash")
 
 # INPUTS
 temp_interna      = float(input("Temperatura interna (-10 a 40°C): "))
@@ -71,3 +78,32 @@ for nome, passou, erro in resultados:
     time.sleep(0.7)
 else:
     print("\n✅ PRONTO PARA DECOLAR")
+
+# ANÁLISE IA
+status_texto = "PRONTO PARA DECOLAR" if status_modulos else "DECOLAGEM ABORTADA"
+
+prompt = f"""
+Você é um sistema de análise de telemetria aeroespacial. Analise os dados da Missão Aurora Siger:
+
+TELEMETRIA:
+- Temperatura interna: {temp_interna}°C
+- Temperatura externa: {temp_externa}°C
+- Gradiente térmico: {gradiente_termico:.1f}°C
+- Nível de energia: {nivel_energia:.1f}%
+- Nível de combustível (RP-1): {nivel_combustivel:.1f}%
+- Nível de oxidante (LOX): {nivel_oxidante:.1f}%
+- Pressão do tanque: {pressao_tanque:.2f} bar
+- Integridade estrutural: {"OK" if integridade == 1 else "ERRO"}
+- Status geral: {status_texto}
+
+Responda em português com:
+1. Classificação dos dados (normal / atenção / crítico)
+2. Possíveis anomalias identificadas
+3. Sugestões de risco
+4. Formato de resposta: Texto simples, direto e claro. Sem formatação adicional.
+"""
+
+print("\n[ Análise IA — Gemini ]")
+print("\n[ Aguardando resultado... ]\n")
+resposta = modelo.generate_content(prompt)
+print(resposta.text)
