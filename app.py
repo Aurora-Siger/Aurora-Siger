@@ -11,7 +11,6 @@ integridade       = int(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
 
 # CÁLCULOS
 gradiente_termico = abs(temp_interna - temp_externa)
-razao_mistura     = nivel_oxidante / nivel_combustivel 
 
 print("\n[ Analisando sistema... ]\n")
 time.sleep(0.5)
@@ -48,11 +47,6 @@ if not (nivel_oxidante >= 80):
     resultados.append(("Nível de oxidante (LOX)", False, f"Oxidante insuficiente ({nivel_oxidante:.1f}%). Mín: 80%."))
 else:
     resultados.append(("Nível de oxidante (LOX)", True, None))
-
-if not (1.8 <= razao_mistura <= 2.2):
-    resultados.append(("Razão de mistura LOX:RP-1", False, f"Proporção fora do limite ({razao_mistura:.2f}). Esperado: 1.8 a 2.2."))
-else:
-    resultados.append(("Razão de mistura LOX:RP-1", True, None))
 
 if not (2.5 <= pressao_tanque <= 4.5):
     resultados.append(("Pressão do tanque", False, f"Pressão fora do intervalo ({pressao_tanque:.2f} bar). Esperado: 2.5–4.5 bar."))
