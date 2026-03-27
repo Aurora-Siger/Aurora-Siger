@@ -1,5 +1,6 @@
 import time
 import os
+import textwrap
 from dotenv import load_dotenv
 import google.generativeai as genai
 
@@ -106,4 +107,5 @@ Responda em português com:
 print("\n[ Análise IA - Gemini ]")
 print("\n[ Aguardando resultado... ]\n")
 resposta = modelo.generate_content(prompt)
-print(resposta.text)
+for linha in resposta.text.splitlines():
+    print(textwrap.fill(linha, width=100) if linha.strip() else '')
