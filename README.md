@@ -26,9 +26,11 @@ flowchart TD
     H -- "Combustível insuficiente.\nMín: 80%" --> Z
     H -- OK --> I{Oxidante LOX\n≥ 80%?}
     I -- "Oxidante insuficiente.\nMín: 80%" --> Z
-    I -- OK --> J{Pressão do tanque\n2.5 a 4.5 bar?}
-    J -- "Pressão fora do intervalo.\nEsperado: 2.5–4.5 bar" --> Z
-    J -- OK --> K{Integridade\nestrutural = 1?}
+    I -- OK --> J{Pressão RP-1\n200 a 400 kPa?}
+    J -- "Pressão fora do intervalo.\nEsperado: 200–400 kPa" --> Z
+    J -- OK --> J2{Pressão LOX\n300 a 500 kPa?}
+    J2 -- "Pressão fora do intervalo.\nEsperado: 300–500 kPa" --> Z
+    J2 -- OK --> K{Integridade\nestrutural = 1?}
     K -- "Falha estrutural\ndetectada" --> Z
     K -- OK --> L{Status dos\nmódulos OK?}
     L -- "Módulos com\nfalha detectada" --> Z
@@ -50,7 +52,8 @@ flowchart TD
 | Nível de energia | Input | ≥ 70% |
 | Nível de combustível RP-1 | Input | ≥ 80% |
 | Nível de oxidante LOX | Input | ≥ 80% |
-| Pressão do tanque | Input | 2.5 a 4.5 bar |
+| Pressão do tanque de RP-1 | Input | 200 a 400 kPa |
+| Pressão do tanque de LOX | Input | 300 a 500 kPa |
 | Integridade estrutural | Input | 1 (OK) |
 | Status dos módulos | Calculado | Todos OK |
 
@@ -93,7 +96,7 @@ A forma mais rápida de rodar sem instalar nada localmente:
 **Dependências:**
 
 ```bash
-pip install google-generativeai python-dotenv
+pip install google-genai python-dotenv
 ```
 
 **Configuração:**
