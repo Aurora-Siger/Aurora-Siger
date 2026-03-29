@@ -14,8 +14,8 @@ temp_externa      = float(input("Temperatura externa (-5 a 45°C): "))
 nivel_energia     = float(input("Nível de energia (% mínimo 70): "))
 nivel_combustivel = float(input("Nível de combustível RP-1 (% mínimo 80): "))
 nivel_oxidante    = float(input("Nível de oxidante LOX (% mínimo 80): "))
-pressao_tanque_rp1 = float(input("Pressão do tanque de RP-1(2.5 a 4.5 bar): "))
-pressao_tanque_lox = float(input("Pressão do tanque de LOX (2.5 a 4.5 bar): "))
+pressao_tanque_rp1 = float(input("Pressão do tanque de RP-1(200 a 400 kPa): "))
+pressao_tanque_lox = float(input("Pressão do tanque de LOX (300 a 500 kPa): "))
 integridade       = bool(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
 
 # CÁLCULOS
@@ -57,13 +57,13 @@ if not (nivel_oxidante >= 80):
 else:
     resultados.append(("Nível de oxidante (LOX)", True, None))
 
-if not (2.5 <= pressao_tanque_rp1 <= 4.5):
-    resultados.append(("Pressão do tanque de RP-1", False, f"Pressão fora do intervalo ({pressao_tanque_rp1:.2f} bar). Esperado: 2.5–4.5 bar."))
+if not (200 <= pressao_tanque_rp1 <= 400):
+    resultados.append(("Pressão do tanque de RP-1", False, f"Pressão fora do intervalo ({pressao_tanque_rp1:.2f} kPa). Esperado: 200–400 kPa."))
 else:
     resultados.append(("Pressão do tanque de RP-1", True, None))
 
-if not (2.5 <= pressao_tanque_lox <= 4.5):
-    resultados.append(("Pressão do tanque de LOX", False, f"Pressão fora do intervalo ({pressao_tanque_lox:.2f} bar). Esperado: 2.5–4.5 bar."))
+if not (300 <= pressao_tanque_lox <= 500):
+    resultados.append(("Pressão do tanque de LOX", False, f"Pressão fora do intervalo ({pressao_tanque_lox:.2f} kPa). Esperado: 300–500 kPa."))
 else:
     resultados.append(("Pressão do tanque de LOX", True, None))
 
