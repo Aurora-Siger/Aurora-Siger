@@ -14,8 +14,9 @@ temp_externa      = float(input("Temperatura externa (-5 a 45°C): "))
 nivel_energia     = float(input("Nível de energia (% mínimo 70): "))
 nivel_combustivel = float(input("Nível de combustível RP-1 (% mínimo 80): "))
 nivel_oxidante    = float(input("Nível de oxidante LOX (% mínimo 80): "))
-pressao_tanque    = float(input("Pressão do tanque (2.5 a 4.5 bar): "))
-integridade       = int(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
+pressao_tanque_rp1 = float(input("Pressão do tanque de RP-1(2.5 a 4.5 bar): "))
+pressao_tanque_lox = float(input("Pressão do tanque de LOX (2.5 a 4.5 bar): "))
+integridade       = bool(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
 
 # CÁLCULOS
 gradiente_termico = abs(temp_interna - temp_externa)
@@ -56,10 +57,15 @@ if not (nivel_oxidante >= 80):
 else:
     resultados.append(("Nível de oxidante (LOX)", True, None))
 
-if not (2.5 <= pressao_tanque <= 4.5):
-    resultados.append(("Pressão do tanque", False, f"Pressão fora do intervalo ({pressao_tanque:.2f} bar). Esperado: 2.5–4.5 bar."))
+if not (2.5 <= pressao_tanque_rp1 <= 4.5):
+    resultados.append(("Pressão do tanque de RP-1", False, f"Pressão fora do intervalo ({pressao_tanque_rp1:.2f} bar). Esperado: 2.5–4.5 bar."))
 else:
-    resultados.append(("Pressão do tanque", True, None))
+    resultados.append(("Pressão do tanque de RP-1", True, None))
+
+if not (2.5 <= pressao_tanque_lox <= 4.5):
+    resultados.append(("Pressão do tanque de LOX", False, f"Pressão fora do intervalo ({pressao_tanque_lox:.2f} bar). Esperado: 2.5–4.5 bar."))
+else:
+    resultados.append(("Pressão do tanque de LOX", True, None))
 
 if not (integridade == 1):
     resultados.append(("Integridade estrutural", False, "Falha estrutural detectada."))
@@ -93,7 +99,8 @@ TELEMETRIA:
 - Nível de energia: {nivel_energia:.1f}%
 - Nível de combustível (RP-1): {nivel_combustivel:.1f}%
 - Nível de oxidante (LOX): {nivel_oxidante:.1f}%
-- Pressão do tanque: {pressao_tanque:.2f} bar
+- Pressão do tanque de RP-1: {pressao_tanque_rp1:.2f} bar
+- Pressão do tanque de LOX: {pressao_tanque_lox:.2f} bar
 - Integridade estrutural: {"OK" if integridade == 1 else "ERRO"}
 - Status geral: {status_texto}
 
@@ -108,4 +115,4 @@ print("\n[ Análise IA - Gemini ]")
 print("\n[ Aguardando resultado... ]\n")
 resposta = modelo.generate_content(prompt)
 for linha in resposta.text.splitlines():
-    print(textwrap.fill(linha, width=100) if linha.strip() else '')
+    print(textwrap.fill(linha, width=150) if linha.strip() else '')
