@@ -8,6 +8,22 @@ Sistema de telemetria e checklist automatizado para a Missão Aurora Siger. Real
 
 ---
 
+## Estrutura do projeto
+
+```
+Aurora-Siger-Dev/
+├── README.md
+├── app.py                          # Sistema de verificação local (Python)
+├── aurora_siger_colab.ipynb        # Notebook para Google Colab
+├── assets/
+│   └── logo_fiap.png
+└── docs/
+    ├── Análise_Energética.md       # Relatório de Análise Energética e Propulsiva
+    └── ReflexaoCritica.md          # Reflexão Crítica (seção 1.6)
+```
+
+---
+
 ## Sobre o projeto
 
 <img src="assets/logo_fiap.png" alt="FIAP" width="120"/>
