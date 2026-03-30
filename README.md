@@ -10,6 +10,8 @@ Sistema de telemetria e checklist automatizado para a Missão Aurora Siger. Real
 
 ## Sobre o projeto
 
+<img src="assets/logo_fiap.png" alt="FIAP" width="120"/>
+
 Trabalho desenvolvido para a **Atividade Integradora — Relatório Operacional de Pré-Decolagem** do PBL (Project-Based Learning) da **FIAP**.
 
 **Alunos:**
