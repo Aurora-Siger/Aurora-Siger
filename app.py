@@ -12,7 +12,7 @@ modelo = genai.GenerativeModel("gemini-2.5-flash")
 temp_interna      = float(input("Temperatura interna (-10 a 40°C): "))
 temp_externa      = float(input("Temperatura externa (-5 a 45°C): "))
 nivel_energia     = float(input("Nível de energia (% mínimo 70): "))
-nivel_combustivel = float(input("Nível de combustível RP-1 (% mínimo 80): "))
+nivel_combustivel = float(input("Nível de combustível RP-1 (% mínimo 95): "))
 nivel_oxidante    = float(input("Nível de oxidante LOX (% mínimo 80): "))
 pressao_tanque_rp1 = float(input("Pressão do tanque de RP-1(200 a 400 kPa): "))
 pressao_tanque_lox = float(input("Pressão do tanque de LOX (300 a 500 kPa): "))
@@ -47,8 +47,8 @@ if not (nivel_energia >= 70):
 else:
     resultados.append(("Nível de energia", True, None))
 
-if not (nivel_combustivel >= 80):
-    resultados.append(("Nível de combustível (RP-1)", False, f"Combustível insuficiente ({nivel_combustivel:.1f}%). Mín: 80%."))
+if not (nivel_combustivel >= 95):
+    resultados.append(("Nível de combustível (RP-1)", False, f"Combustível insuficiente ({nivel_combustivel:.1f}%). Mín: 95%."))
 else:
     resultados.append(("Nível de combustível (RP-1)", True, None))
 

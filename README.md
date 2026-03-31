@@ -81,7 +81,7 @@ flowchart TD
 | Temperatura externa (estrutura) | Input | -5°C a 45°C |
 | Gradiente térmico | Calculado | ≤ 40°C |
 | Nível de energia | Input | ≥ 70% |
-| Nível de combustível RP-1 | Input | ≥ 80% |
+| Nível de combustível RP-1 | Input | ≥ 95% |
 | Nível de oxidante LOX | Input | ≥ 80% |
 | Pressão do tanque de RP-1 | Input | 200 a 400 kPa |
 | Pressão do tanque de LOX | Input | 300 a 500 kPa |
