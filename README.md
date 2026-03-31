@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Gemini](https://img.shields.io/badge/Gemini-2.5%20Flash-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aurora-Siger/Aurora-Siger-Dev/blob/main/aurora_siger_colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aurora-Siger/aurora-siger/blob/main/aurora_siger_colab.ipynb)
 
 Sistema de telemetria e checklist automatizado para a Missão Aurora Siger. Realiza verificações dos parâmetros críticos da nave e decide se o sistema está apto para decolagem.
 
@@ -11,7 +11,7 @@ Sistema de telemetria e checklist automatizado para a Missão Aurora Siger. Real
 ## Estrutura do projeto
 
 ```
-Aurora-Siger-Dev/
+aurora-siger/
 ├── README.md
 ├── app.py                          # Sistema de verificação local (Python)
 ├── aurora_siger_colab.ipynb        # Notebook para Google Colab
@@ -129,7 +129,7 @@ O Colab possui um cofre de variáveis seguras chamado **Secrets**, que evita exp
 
 1. Abra o notebook clicando no botão abaixo:
 
-   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aurora-Siger/Aurora-Siger-Dev/blob/main/aurora_siger_colab.ipynb)
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Aurora-Siger/aurora-siger/blob/main/aurora_siger_colab.ipynb)
 
 2. Execute as células **em ordem**, de cima para baixo (menu **Ambiente de execução → Executar tudo**, ou `Ctrl+F9`).
 3. Na célula de inputs, preencha cada valor solicitado e pressione `Enter` para confirmar.

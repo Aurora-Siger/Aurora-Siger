@@ -16,7 +16,7 @@ nivel_combustivel = float(input("Nível de combustível RP-1 (% mínimo 80): "))
 nivel_oxidante    = float(input("Nível de oxidante LOX (% mínimo 80): "))
 pressao_tanque_rp1 = float(input("Pressão do tanque de RP-1(200 a 400 kPa): "))
 pressao_tanque_lox = float(input("Pressão do tanque de LOX (300 a 500 kPa): "))
-integridade       = bool(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
+integridade       = int(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
 
 # CÁLCULOS
 gradiente_termico = abs(temp_interna - temp_externa)
@@ -99,8 +99,8 @@ TELEMETRIA:
 - Nível de energia: {nivel_energia:.1f}%
 - Nível de combustível (RP-1): {nivel_combustivel:.1f}%
 - Nível de oxidante (LOX): {nivel_oxidante:.1f}%
-- Pressão do tanque de RP-1: {pressao_tanque_rp1:.2f} bar
-- Pressão do tanque de LOX: {pressao_tanque_lox:.2f} bar
+- Pressão do tanque de RP-1: {pressao_tanque_rp1:.2f} kPa
+- Pressão do tanque de LOX: {pressao_tanque_lox:.2f} kPa
 - Integridade estrutural: {"OK" if integridade == 1 else "ERRO"}
 - Status geral: {status_texto}
 
