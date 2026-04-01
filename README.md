@@ -25,9 +25,6 @@ aurora-siger/
         ├── Calculo 2.jpeg          # Equação de Tsiolkovsky - Cenário B
         ├── Calculo 3.jpeg          # Consumo energético por fase
         ├── Calculo 4.jpeg          # Análise de viabilidade
-        ├── Resultado 1.png         # Verificação de massa seca
-        ├── Resultado 2.png         # Balanço de energia
-        └── Resultado 3.png         # Margem de segurança propulsiva
 ```
 
 ---
