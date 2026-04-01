@@ -24,7 +24,7 @@ A principal diferença entre o Aurora P-1 e seus motores de referência é a con
 | Razão combustível/oxidante | 1:2 (RP-1:LOX) | Padrão LOX/RP-1 aeroespacial |
 | Configuração | Estágio único (SSTO) | Definição da Missão Aurora |
 
-> **Nota sobre o Isp em vácuo (320 s):** O Merlin 1D opera com Isp de 311 s em vácuo (Astronautix, 2013). O valor de 320 s adotado para o Aurora P-1 é ligeiramente superior, representando uma projeção de desempenho aprimorado para um motor fictício de próxima geração, mantendo plena coerência com a família de motores que o inspirou. Todos os cálculos de ΔV, consumo de propelente e autonomia apresentados nas seções subsequentes utilizam o Isp de 320 s como valor de referência.
+> **Nota sobre o Isp em vácuo (320 s):** O Merlin 1D opera com Isp de 348 s em vácuo (Astronautix). O valor de 320 s adotado para o Aurora P-1 é uma projeção de desempenho para um motor fictício de próxima geração, mantendo coerência com a família de motores que o inspirou. Todos os cálculos de ΔV, consumo de propelente e autonomia apresentados nas seções subsequentes utilizam o Isp de 320 s como valor de referência.
 
 ### Fontes desta seção
 
@@ -96,7 +96,7 @@ Em uma configuração monobloco, a massa final de cada fase se torna a massa ini
 | Motor | Isp em vácuo | Propelente |
 |-------|:------------:|------------|
 | Aurora P-1 (este projeto) | 320 s | RP-1 / LOX |
-| Merlin 1D — SpaceX (referência) | 311 s | RP-1 / LOX |
+| Merlin 1D — SpaceX (referência) | 348 s | RP-1 / LOX |
 | RS-25 — Space Shuttle | 453 s | LH₂ / LOX |
 | Motor químico típico | 250–460 s | varia |
 

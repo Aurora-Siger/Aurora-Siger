@@ -19,8 +19,22 @@ aurora-siger/
 │   └── logo_fiap.png
 └── docs/
     ├── Análise_Energética.md       # Relatório de Análise Energética e Propulsiva
-    └── ReflexaoCritica.md          # Reflexão Crítica (seção 1.6)
+    ├── ReflexaoCritica.md          # Reflexão Crítica (seção 1.6)
+    └── calculos/                   # Cálculos realizados no caderno
+        ├── Calculo 1.jpeg          # Equação de Tsiolkovsky - Cenário A
+        ├── Calculo 2.jpeg          # Equação de Tsiolkovsky - Cenário B
+        ├── Calculo 3.jpeg          # Consumo energético por fase
+        ├── Calculo 4.jpeg          # Análise de viabilidade
+        ├── Resultado 1.png         # Verificação de massa seca
+        ├── Resultado 2.png         # Balanço de energia
+        └── Resultado 3.png         # Margem de segurança propulsiva
 ```
+
+---
+
+## Cálculos do Caderno
+
+Os cálculos realizados manualmente durante a análise da missão encontram-se documentados em [`docs/calculos/`](docs/calculos/). Estes fundamentam o **Relatório de Análise Energética e Propulsiva** disponível em [`docs/Análise_Energética.md`](docs/Análise_Energética.md).
 
 ---
 
@@ -222,7 +236,7 @@ Análise complementar dos dados pela IA, com classificação de parâmetros, ide
 
 ## Fontes e Referências
 
-Os parâmetros operacionais e os dados energéticos do sistema têm base no **Relatório de Análise Energética e Propulsiva — Missão Aurora Siger (Março de 2026)**. As referências técnicas utilizadas naquele relatório estão listadas abaixo.
+Os parâmetros operacionais e os dados energéticos do sistema têm base no **Relatório de Análise Energética e Propulsiva — Missão Aurora Siger (Março de 2026)**, cujos cálculos manualmente realizados encontram-se documentados em [`docs/calculos/`](docs/calculos/). As referências técnicas utilizadas naquele relatório estão listadas abaixo.
 
 | Sistema / Dado | Fonte |
 |---|---|
