@@ -53,8 +53,8 @@ flowchart TD
     F -- "Gradiente excessivo.\nMáx: 40°C" --> Z
     F -- OK --> G{Nível de energia\n≥ 70%?}
     G -- "Energia insuficiente.\nMín: 70%" --> Z
-    G -- OK --> H{Combustível RP-1\n≥ 80%?}
-    H -- "Combustível insuficiente.\nMín: 80%" --> Z
+    G -- OK --> H{Combustível RP-1\n≥ 95%?}
+    H -- "Combustível insuficiente.\nMín: 95%" --> Z
     H -- OK --> I{Oxidante LOX\n≥ 80%?}
     I -- "Oxidante insuficiente.\nMín: 80%" --> Z
     I -- OK --> J{Pressão RP-1\n200 a 400 kPa?}
@@ -175,6 +175,48 @@ O notebook [`aurora_siger_colab.ipynb`](aurora_siger_colab.ipynb) está dividido
 | **3. Dados de telemetria** | Solicita os 8 parâmetros de entrada via `input()`. Os valores são armazenados em variáveis para uso nas próximas etapas. |
 | **4. Verificação de sistemas** | Valida cada parâmetro contra os limites operacionais definidos no relatório da missão. Exibe o resultado linha a linha com um pequeno delay para simular processamento em tempo real. Ao encontrar a primeira falha, aborta e exibe o motivo. Se todos os sistemas passarem, conclui com ✅ PRONTO PARA DECOLAR. |
 | **5. Análise IA — Gemini** | Monta um prompt estruturado com todos os dados de telemetria e envia ao modelo `gemini-2.5-flash`. O modelo retorna uma análise em português classificando cada parâmetro, apontando anomalias e sugerindo riscos. |
+
+---
+
+## Exemplos de Execução
+
+### Passo 1 — Instalação
+
+Instalação das dependências necessárias no ambiente Colab.
+
+![Passo 1 - Instalação](assets/Passo%201%20-%20Instalação.png)
+
+---
+
+### Passo 2 — Configuração do Cliente Gemini
+
+Leitura da chave de API do cofre Secrets e inicialização do cliente Gemini.
+
+![Passo 2 - Configuração do Cliente Gemini](assets/Passo%202%20-%20Configuração%20do%20Cliente%20Gemini.png)
+
+---
+
+### Passo 3 — Dados de Telemetria
+
+Inserção dos parâmetros de telemetria da nave via `input()`.
+
+![Passo 3 - Dados de Telemetria](assets/Passo%203%20-%20%20Dados%20de%20Telemetria.png)
+
+---
+
+### Passo 4 — Verificação de Sistemas
+
+Validação sequencial de todos os parâmetros e exibição do resultado linha a linha. A decolagem é autorizada apenas se **todos** os sistemas passarem.
+
+![Passo 4 - Verificação de Sistemas](assets/Passo%204%20-%20Verificação%20de%20Sistemas.png)
+
+---
+
+### Passo 5 — Análise IA — Gemini
+
+Análise complementar dos dados pela IA, com classificação de parâmetros, identificação de anomalias e sugestões de risco.
+
+![Passo 5 - Análise IA - Gemini](assets/Passo%205%20-%20Análise%20IA%20-%20Gemini.png)
 
 ---
 
