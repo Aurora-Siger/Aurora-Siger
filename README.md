@@ -110,7 +110,7 @@ A forma mais rápida de rodar sem instalar nada localmente.
 
 1. Acesse o [Google AI Studio](https://aistudio.google.com/app/apikey) com sua conta Google.
 2. Clique em **Create API key** e selecione um projeto Google Cloud (ou crie um novo).
-3. Copie a chave gerada (formato: `AIza...`). Guarde-a com segurança — ela não será exibida novamente.
+3. Copie a chave gerada (formato: `AIza...`).
 
 **Passo 2 — Configurar o Secrets no Colab**
 
