@@ -13,7 +13,7 @@ temp_interna      = float(input("Temperatura interna (-10 a 40°C): "))
 temp_externa      = float(input("Temperatura externa (-5 a 45°C): "))
 nivel_energia     = float(input("Nível de energia (% mínimo 70): "))
 nivel_combustivel = float(input("Nível de combustível RP-1 (% mínimo 95): "))
-nivel_oxidante    = float(input("Nível de oxidante LOX (% mínimo 80): "))
+nivel_oxidante    = float(input("Nível de oxidante LOX (% mínimo 95): "))
 pressao_tanque_rp1 = float(input("Pressão do tanque de RP-1(200 a 400 kPa): "))
 pressao_tanque_lox = float(input("Pressão do tanque de LOX (300 a 500 kPa): "))
 integridade       = int(input("Integridade estrutural (1 = OK, 0 = ERRO): "))
@@ -52,8 +52,8 @@ if not (nivel_combustivel >= 95):
 else:
     resultados.append(("Nível de combustível (RP-1)", True, None))
 
-if not (nivel_oxidante >= 80):
-    resultados.append(("Nível de oxidante (LOX)", False, f"Oxidante insuficiente ({nivel_oxidante:.1f}%). Mín: 80%."))
+if not (nivel_oxidante >= 95):
+    resultados.append(("Nível de oxidante (LOX)", False, f"Oxidante insuficiente ({nivel_oxidante:.1f}%). Mín: 95%."))
 else:
     resultados.append(("Nível de oxidante (LOX)", True, None))
 

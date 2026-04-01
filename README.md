@@ -55,8 +55,8 @@ flowchart TD
     G -- "Energia insuficiente.\nMín: 70%" --> Z
     G -- OK --> H{Combustível RP-1\n≥ 95%?}
     H -- "Combustível insuficiente.\nMín: 95%" --> Z
-    H -- OK --> I{Oxidante LOX\n≥ 80%?}
-    I -- "Oxidante insuficiente.\nMín: 80%" --> Z
+    H -- OK --> I{Oxidante LOX\n≥ 95%?}
+    I -- "Oxidante insuficiente.\nMín: 95%" --> Z
     I -- OK --> J{Pressão RP-1\n200 a 400 kPa?}
     J -- "Pressão fora do intervalo.\nEsperado: 200–400 kPa" --> Z
     J -- OK --> J2{Pressão LOX\n300 a 500 kPa?}
@@ -82,7 +82,7 @@ flowchart TD
 | Gradiente térmico | Calculado | ≤ 40°C |
 | Nível de energia | Input | ≥ 70% |
 | Nível de combustível RP-1 | Input | ≥ 95% |
-| Nível de oxidante LOX | Input | ≥ 80% |
+| Nível de oxidante LOX | Input | ≥ 95% |
 | Pressão do tanque de RP-1 | Input | 200 a 400 kPa |
 | Pressão do tanque de LOX | Input | 300 a 500 kPa |
 | Integridade estrutural | Input | 1 (OK) |
